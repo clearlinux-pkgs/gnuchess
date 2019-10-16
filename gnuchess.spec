@@ -4,7 +4,7 @@
 #
 Name     : gnuchess
 Version  : 6.2.5
-Release  : 1
+Release  : 2
 URL      : https://ftp.gnu.org/gnu/chess/gnuchess-6.2.5.tar.gz
 Source0  : https://ftp.gnu.org/gnu/chess/gnuchess-6.2.5.tar.gz
 Summary  : Play chess against the computer on a terminal and an engine for graphical chess frontends
