@@ -6,10 +6,10 @@
 #
 Name     : gnuchess
 Version  : 6.2.5
-Release  : 3
+Release  : 4
 URL      : https://ftp.gnu.org/gnu/chess/gnuchess-6.2.5.tar.gz
 Source0  : https://ftp.gnu.org/gnu/chess/gnuchess-6.2.5.tar.gz
-Source1 : https://ftp.gnu.org/gnu/chess/gnuchess-6.2.5.tar.gz.sig
+Source1  : https://ftp.gnu.org/gnu/chess/gnuchess-6.2.5.tar.gz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -20,8 +20,10 @@ Requires: gnuchess-license = %{version}-%{release}
 Requires: gnuchess-locales = %{version}-%{release}
 Requires: gnuchess-man = %{version}-%{release}
 BuildRequires : flex
+BuildRequires : help2man
 BuildRequires : ncurses-dev
 BuildRequires : readline-dev
+Patch1: CVE-2019-15767.patch
 
 %description
 GNU Chess Project
@@ -80,22 +82,22 @@ man components for the gnuchess package.
 
 %prep
 %setup -q -n gnuchess-6.2.5
-cd %{_builddir}/gnuchess-6.2.5
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573789173
+export SOURCE_DATE_EPOCH=1586381787
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -107,7 +109,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1573789173
+export SOURCE_DATE_EPOCH=1586381787
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnuchess
 cp %{_builddir}/gnuchess-6.2.5/COPYING %{buildroot}/usr/share/package-licenses/gnuchess/8624bcdae55baeef00cd11d5dfcfa60f68710a02
