@@ -1,3 +1,107 @@
+2020-04-18  Antonio Ceballos  <aceballos@gmail.com>
+
+	* ChangeLog: Release 6.2.6
+	* NEWS: Release 6.2.6
+	* configure.ac: Release 6.2.6
+	* doc/version.texi: Release 6.2.6
+	* po/gnuchess.pot: Update POT file
+	* po/*.po: Update translations
+
+2020-04-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* ChangeLog: Pre-release 6.2.6-pre3
+	* NEWS: Pre-release 6.2.6-pre3
+	* configure.ac: Pre-release 6.2.6-pre3
+	* doc/version.texi: Pre-release 6.2.6-pre3
+
+2020-04-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* po/gnuchess.pot: Update POT file.
+
+2020-04-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/cmd.cc: Fix buffer overflow while copying string
+
+2020-04-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/pgn.cc: Improve comment for translators.
+
+2020-04-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* test/commands/test_command.tcl: Add colon at the end of expected output.
+
+2020-03-22  Antonio Ceballos  <aceballos@gmail.com>
+
+	* NEWS: Pre-release 6.2.6-pre2
+	* configure.ac: Pre-release 6.2.6-pre2
+	* doc/version.texi: Pre-release 6.2.6-pre2
+	* src/frontend/cmd.cc: More consistent use of periods in translatable
+	texts
+	* src/frontend/common.h: More consistent use of periods in translatable
+	texts
+	* src/frontend/move.cc: More consistent use of periods in translatable
+	texts
+
+
+2020-03-22  Antonio Ceballos  <aceballos@gmail.com>
+
+	* po/gnuchess.pot: Update POT file and list of tanslations
+
+2020-03-22  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/cmd.cc: Fix inconsistent behaviour when clearing a move
+	such as '0-0'
+	* src/frontend/common.h: Fix inconsistent behaviour when clearing a move
+	such as '0-0'
+	* src/frontend/move.cc: Fix inconsistent behaviour when clearing a move
+	such as '0-0'
+
+2020-03-15  Antonio Ceballos  <aceballos@gmail.com>
+
+	* po/gnuchess.pot: Update POT file and list of tanslations
+	* po/LINGUAS: Update POT file and list of tanslations
+
+2020-03-15  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Makefile.am: Pre-release 6.2.6-pre1
+	* NEWS: Pre-release 6.2.6-pre1
+	* configure.ac: Pre-release 6.2.6-pre1
+	* doc/gnuchess.texi: Pre-release 6.2.6-pre1
+	* doc/version.texi: Pre-release 6.2.6-pre1
+	* src/main.cc: Pre-release 6.2.6-pre1
+
+2020-02-23  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/main.cc: avoid compilation warning by assigning
+	function return value to a variable.
+	* src/frontend/engine.cc: avoid compilation warning by assigning 
+	function return value to a variable.
+	* src/frontend/epd.cc: handle return value of fgets.
+	* src/frontend/input.cc: delete sprintf copy of zero-length format
+	string.
+
+2020-02-22  Antonio Ceballos  <aceballos@gmail.com>
+
+	* misc/svn-ignore/: files ignored by Subversion.
+	* 'svn propset svn:ignore' set
+
+2020-02-18  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/main.cc: initialize frontend only if not UCI mode.
+
+2017-07-26  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: version 6.2.5e.
+	* doc/version.texi: version 6.2.5e.
+	* TODO: localize "y/n" answer in pgn.cc.
+	* src/main.cc: some fixes in localized strings.
+	* src/frontend/input.cc: localize some strings.
+	* src/frontend/pgn.cc: localize "y/n" answer.
+	* src/frontend/cmd.cc: some fixes in localized strings.
+	* po/gnuchess.pot: regenerated with new and modified strings.
+	* po/POTFILES.in: added input.cc
+	* po/POTFILES: added input.cc
+
 2017-07-24  Antonio Ceballos  <aceballos@gmail.com>
 
 	* configure.ac: version 6.2.5.
@@ -658,7 +762,7 @@
 	* src/frontend/engine.c: comment out extra output write.
 	* src/adapter/adapter.cpp: remove debug trace.
 
-Copyright (C) 2001-2017 Free Software Foundation, Inc.
+Copyright (C) 2001-2020 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
