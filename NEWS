@@ -6,13 +6,17 @@ NEWS of GNU Chess
   are permitted in any medium without royalty provided the copyright
   notice and this notice are preserved.
 
+Version 6.2.7 (May 2020)
+
+- Minor fixes in the build system.
+
 Version 6.2.6 (April 2020)
 
 - Fix buffer overflow on load EPD file.
 - Fix move validation when cleaning up moves, e.g. accepting '0-0'
 for O-O'.
 - More consistent use of period in translatable texts.
-- Minor fixes on compilation warnings
+- Minor fixes on compilation warnings.
 - New and updated translations.
 
 Version 6.2.5 (July 2017)
