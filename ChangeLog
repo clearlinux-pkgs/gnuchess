@@ -1,3 +1,47 @@
+2021-05-09  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Release 6.2.8
+
+2021-03-24  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Info on how to run XBoard to play GNU Chess agaisnt itself
+
+2021-03-24  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Avoid error message after reading EPD file
+
+2021-03-16  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Pre-release 6.2.8-pre1
+
+2021-03-16  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Fix frontend wrongly stripping engine output in UCI mode
+
+2021-01-08  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Do not modify stdin/stdout buffering from adapter thread
+
+2020-11-23  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Better help about integration with XBoard
+
+2020-11-02  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Basic test for command 'pgnsave'
+
+2020-10-25  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Modify command 'pgnsave file': if file exists, do not save
+
+2020-10-24  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Remove compilation warnings: unused variables, signed-unsigned
+
+2020-10-23  Simon Waters <simon@technocool.net>
+
+	* Avoid overlapping strings on 'pgnsave'
+
 2020-05-31  Antonio Ceballos  <aceballos@gmail.com>
 
 	* Release 6.2.7
@@ -789,7 +833,7 @@
 	* src/frontend/engine.c: comment out extra output write.
 	* src/adapter/adapter.cpp: remove debug trace.
 
-Copyright (C) 2001-2020 Free Software Foundation, Inc.
+Copyright (C) 2001-2021 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
