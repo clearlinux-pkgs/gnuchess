@@ -1,3 +1,28 @@
+2021-07-13  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Release 6.2.9
+
+2021-07-04  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Pre-release 6.2.9-pre3
+
+2021-07-04  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Pre-release 6.2.9-pre2
+
+2021-07-03  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Pre-release 6.2.9-pre1
+
+2021-06-27  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Get rid of temporary EPD file in PGN load operations: .tmp.epd
+	* Fixed CVE-2021-30184: buffer overflow on pgnload and pgnreplay
+
+2021-05-15  Benno Schulenberg  <bensberg@telfort.nl>  (tiny change)
+
+	* More correct usage for gnuchess.ini
+
 2021-05-09  Antonio Ceballos  <aceballos@gmail.com>
 
 	* Release 6.2.8

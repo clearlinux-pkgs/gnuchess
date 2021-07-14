@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x43AC7FF93CED5A6B (aceballos@gmail.com)
 #
 Name     : gnuchess
-Version  : 6.2.8
-Release  : 8
-URL      : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.8.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.8.tar.gz
-Source1  : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.8.tar.gz.sig
+Version  : 6.2.9
+Release  : 9
+URL      : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.9.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.9.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.9.tar.gz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
@@ -79,15 +79,15 @@ man components for the gnuchess package.
 
 
 %prep
-%setup -q -n gnuchess-6.2.8
-cd %{_builddir}/gnuchess-6.2.8
+%setup -q -n gnuchess-6.2.9
+cd %{_builddir}/gnuchess-6.2.9
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1620753654
+export SOURCE_DATE_EPOCH=1626274689
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,10 +107,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1620753654
+export SOURCE_DATE_EPOCH=1626274689
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnuchess
-cp %{_builddir}/gnuchess-6.2.8/COPYING %{buildroot}/usr/share/package-licenses/gnuchess/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gnuchess-6.2.9/COPYING %{buildroot}/usr/share/package-licenses/gnuchess/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 %find_lang gnuchess
 
