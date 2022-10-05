@@ -6,7 +6,7 @@
 #
 Name     : gnuchess
 Version  : 6.2.9
-Release  : 9
+Release  : 10
 URL      : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.9.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.9.tar.gz
 Source1  : https://mirrors.kernel.org/gnu/chess/gnuchess-6.2.9.tar.gz.sig
@@ -87,15 +87,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1626274689
+export SOURCE_DATE_EPOCH=1664940657
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -107,10 +107,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1626274689
+export SOURCE_DATE_EPOCH=1664940657
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gnuchess
-cp %{_builddir}/gnuchess-6.2.9/COPYING %{buildroot}/usr/share/package-licenses/gnuchess/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gnuchess-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gnuchess/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :
 %make_install
 %find_lang gnuchess
 
