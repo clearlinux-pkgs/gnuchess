@@ -1,10 +1,15 @@
 NEWS of GNU Chess
 
-  Copyright (C) 2001-2021 Free Software Foundation, Inc.
+  Copyright (C) 2001-2025 Free Software Foundation, Inc.
 
   Copying and distribution of this file, with or without modification,
   are permitted in any medium without royalty provided the copyright
   notice and this notice are preserved.
+
+Version 6.2.11 (April 2025)
+Version 6.2.10 (April 2025)
+
+- Tempo bonus added in the evaluation function.
 
 Version 6.2.9 (July 2021)
 

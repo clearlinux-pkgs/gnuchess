@@ -1,3 +1,25 @@
+2025-04-19  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Release 6.2.11
+
+2025-04-19  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Release 6.2.10
+
+2025-04-17  Antonio Ceballos  <aceballos@gmail.com>
+
+	* Pre-release 6.2.10-pre1
+
+2025-04-17  Antonio Ceballos  <aceballos@gmail.com>
+
+	* 'book_small.bin' replaced by 'smallbook.ini' in the default options
+	of the engine
+	* 'register' keyword removed, deprecated in C++17.
+
+2025-04-17  Daniel Díaz <dani.diaz@mail.com>
+
+	* Tempo bonus added in the evaluation function
+
 2021-07-13  Antonio Ceballos  <aceballos@gmail.com>
 
 	* Release 6.2.9
@@ -858,7 +880,7 @@
 	* src/frontend/engine.c: comment out extra output write.
 	* src/adapter/adapter.cpp: remove debug trace.
 
-Copyright (C) 2001-2021 Free Software Foundation, Inc.
+Copyright (C) 2001-2025 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
